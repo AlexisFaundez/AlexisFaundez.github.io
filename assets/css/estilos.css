@@ -75,4 +75,16 @@ div.slider {
     100% {margin-left: -300%;}
 }
 
-
+h2 Bienvenida{
+    color: aqua;
+}
+.bienvenida{
+    color: aquamarine;
+}
+h3{
+    text-align: center;
+    color: red
+}
+.texto-bienvenida{
+    color: red; text-align: center;
+}
