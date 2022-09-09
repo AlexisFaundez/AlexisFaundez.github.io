@@ -11,37 +11,53 @@
 
   <body>
     <header>
-      <h1>Los Mejores Pins</h1>
+      <h1 class="header1">Los Mejores Pins</h1>
 
 <!--Nav-->
-      <nav class="navbar navbar-expand-lg bg-light">
-        <div class="container-fluid">
-          <a class="navbar-brand" href="#bienvenidos">Bienvenida</a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">     
-          </button>
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-              <li class="nav-item">
-                <a class="nav-link" aria-current="page" href="#gatos">Gatos</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#anime">Animé</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#videojuegos">Videojuegos</a>
-              </li>
-            </ul>
-            
-            </form>
-          </div>
-        </div>
-      </nav>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
+    
+<!-- Nav Bar Starts Here -->
+<div class="nav-bar">
+        <nav class="navbar navbar-expand-lg bg-light">
+            <div class="container">
+              <a class="navbar-brand" href="#">
+                <img src="https://cdn.drawception.com/drawings/aXv7sqJRgJ.png" alt="" width="24" height="30">
+              </a>
+
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#">Inicio</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#gatos">Gatos!</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#anime">Animé!</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#videojuegos">Videojuegos!</a>
+                  </li>
+                </li>
+
+                </ul>
+              </div>
+            </div>
+          </nav>
+</div>
+
+
+
     </header>
 
 
 <!--Saludo y mensaje inicial-->
-<main> 
-  <div>
+<main id="inicio"> 
+  <div class="intro">
 <h2 class="bienvenida" id="bienvenidos">Bienvenidos</h2>
 <p class="texto-bienvenida">En esta página podrás encontrar distintos tipos de pins/broches para adornar y personalizar todos tus accesorios.</p>
   </div>
@@ -68,7 +84,8 @@
 
 </main>
 <!--Pins Gatos-->
-<h3 id="gatos">Gatos!</h3>
+<h3 class="section-title" id="gatos">Gatos!</h3>
+<div class="pinsgatos">
 <ul>
   <div class="card" style="width: 20rem">
     <img class="border1" src="assets/images/gato1.jpg" />
@@ -115,9 +132,11 @@
     </div>
   </div>
 </ul>
-
+</div>
 <!--Pins Animé-->
-<h3 id="anime">Animé!</h3>
+<h3 class="section-title" id="anime">Animé!</h3>
+<div class="pinsanime">
+
 <ul>
   <div class="card" style="width: 20rem">
     <img class="border1" src="assets/images/naruto.jpg" />
@@ -164,10 +183,65 @@
     </div>
   </div>
 </ul>
+</div>
+<!--Pins Videojuegos-->
+
+<!--Pins Animé-->
+<h3 class="section-title" id="videojuegos">Videojuegos!</h3>
+<div class="pinsvideojuegos">
+
+<ul>
+  <div class="card" style="width: 20rem">
+    <img class="border1" src="assets/images/videojuego1.jpg" />
+    <div class="card-body">
+      <h5 class="card-title">Arcade</h5>
+      <p class="card-text"></p>
+      <a href="#" class="btn btn-primary">Comprar por $3500</a>
+    </div>
+  </div>
+
+  <div class="card" style="width: 20rem">
+    <img class="border1" src="assets/images/videojuego2.jpg" />
+    <div class="card-body">
+      <h5 class="card-title">Consola portatil</h5>
+      <p class="card-text"></p>
+      <a href="#" class="btn btn-primary">Comprar por $3500</a>
+    </div>
+  </div>
+
+  <div class="card" style="width: 20rem">
+    <img class="border1" src="assets/images/videojuego3.jpg" />
+    <div class="card-body">
+      <h5 class="card-title">FF VII Cloud</h5>
+      <p class="card-text"></p>
+      <a href="#" class="btn btn-primary">Comprar por $3500</a>
+    </div>
+  </div>
+
+  <div class="card" style="width: 20rem">
+    <img class="border1" src="assets/images/videojuego4.jpg" />
+    <div class="card-body">
+      <h5 class="card-title">Yoshi</h5>
+      <p class="card-text"></p>
+      <a href="#" class="btn btn-primary">Comprar por $3500</a>
+    </div>
+  </div>
+
+  <div class="card" style="width: 20rem">
+    <img class="border1" src="assets/images/videojuego5.jpg" />
+    <div class="card-body">
+      <h5 class="card-title">Metal Slug Marco</h5>
+      <p class="card-text"></p>
+      <a href="#" class="btn btn-primary">Comprar por $3500</a>
+    </div>
+  </div>
+</ul>
+</div>
+
 
 <!--Formulario-->
-<div>
-<h2>No encuentras el diseño que buscas? Déjanos tus datos y te enviaremos opciones para que obtengas tu pin!</h2>
+<div class="formulario">
+<h2 class="formulario-texto">No encuentras el diseño que buscas? Déjanos tus datos y te enviaremos opciones para que obtengas tu pin!</h2>
   <label for="fname">Nombre:</label><br>
   <input type="text" id="fname" name="fname" placeholder="Nombre y Apellido"><br>
   <label for="lname">Correo Electrónico</label><br>
@@ -178,5 +252,9 @@
 </form>
 </div>
 
+
+<footer>
+  links varios
+</footer>
   </body>
 </html>
