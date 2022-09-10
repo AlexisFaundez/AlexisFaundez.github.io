@@ -67,11 +67,11 @@
       <h2 class="bienvenida" id="bienvenidos">Bienvenidos</h2>
     </div>
 
-  <div id="goTop">
+    <div id="goTop">
       <a href="#" id="scrollToTop" style="display: inline;">
-          <img src="https://78.media.tumblr.com/tumblr_mb4b1xOvuA1qmmxb9o1_250.png">
+        <img src="https://78.media.tumblr.com/tumblr_mb4b1xOvuA1qmmxb9o1_250.png">
       </a>
-  </div>  
+    </div>
 
     <!--Slider imagenes-->
 
@@ -80,8 +80,9 @@
       <div class="slider-container row">
         <div class="texto-bienvenida col-md-6">
           <div>
-          <h2 class="texto-saludo">En esta página podrás encontrar distintos tipos de pins/broches para adornar y
-            personalizar todos tus accesorios.</h2></div>
+            <h2 class="texto-saludo">En esta página podrás encontrar distintos tipos de pins/broches para adornar y
+              personalizar todos tus accesorios.</h2>
+          </div>
         </div>
         <div class="slider col-md-6">
           <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
@@ -322,6 +323,8 @@
       </div>
     </div>
   </div>
+
+
   <!--Formulario-->
   <div class="formulario">
     <h2 class="formulario-texto">No encuentras el diseño que buscas? Déjanos tus datos y te enviaremos opciones para que
@@ -336,6 +339,32 @@
     </form>
   </div>
 
+  <!--Formulario JS-->
+  <section>
+    <div>
+      <h3>Si no encuentras lo que buscas, déja tu información y te daremos opciones para que obtengas el mejor pin!</h3>
+      <div class="formulariojs">
+        <form>
+          <label for="caja-texto-nombre">Nombre Completo</label><br>
+          <input type="text" name="nombre" id="caja-texto-nombre" placeholder="Nombre y Apellido" required><br>
+
+          <label for="caja-texto-email">Correo</label><br>
+          <input type="email" name="email" id="caja-texto-email" placeholder="correoejemplo@mail.com" required><br>
+
+          <label for="caja-texto-telefono">Teléfono</label><br>
+          <input type="text" name="telefono" id="caja-texto-telefono" placeholder="12345678" required minlength="8"
+            maxlength="8"><br>
+
+          <label for="caja-texto-comentario">Pedido aquí</label><br>
+          <input type="text" name="comentario" id="caja-texto-comentario" placeholder="Qué es lo que buscas?"
+            required><br>
+
+          <button type="submit" name="send-button">Enviar</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
 
   <footer>
     <div>
@@ -344,6 +373,47 @@
   </footer>
 
 
+
+  <script src="https://code.jquery.com/jquery-3.6.1.min.js"
+    integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
+  </script>
+
+  <script type="text/javascript">
+
+    /*Definir variables nombre, telefono, email y comentario*/
+    /*Obtener los elementos html que contienen estos datos*/
+
+    $('#contactForm').on('submit', function (event) {
+      event.preventDefault(); // prevent reload
+
+
+      var cajaNombre = $('#caja-texto-nombre').val();
+      var cajaTelefono = $('#caja-texto-telefono').val();
+      var cajaEmail = $('#caja-texto-email').val();
+      var cajaComentario = $('#caja-texto-comentario').val();
+
+      alert(cajaNombre, cajaTelefono, cajaEmail, cajaComentario);
+
+      var formData = new FormData(this);
+      formData.append('service_id', 'service_8uh0tht');
+      formData.append('template_id', 'template_syjmm7m');
+      formData.append('user_id', 'GxKq7BaqZ37GKEfYG');
+
+      $.ajax('https://api.emailjs.com/api/v1.0/email/send-form', {
+        type: 'POST',
+        data: formData,
+        contentType: false, // auto-detection
+        processData: false // no need to parse formData to string
+      }).done(function () {
+        alert('Your mail is sent!');
+      }).fail(function (error) {
+        alert('Oops... ' + JSON.stringify(error));
+      });
+
+    });
+  </script>
 
 </body>
 
