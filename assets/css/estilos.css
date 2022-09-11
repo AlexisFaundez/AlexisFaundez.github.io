@@ -72,12 +72,16 @@ h3{
 
 #goTop {
     position: fixed;
-    top: 60px;
+    bottom: 60px;
     right: 20px;
     color: transparent;
     position: top;
+    z-index: 9999999;
     }
 
 .formulariojs{
         background-color: white; color: black;
     }
+.color-footer{
+    background-color: cornflowerblue;
+}
